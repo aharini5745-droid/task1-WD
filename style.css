@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(180deg,#eafafc,#7edfff);
+    color: #111;
+    line-height: 1.6;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* Header */
+header{
+    padding: 16px 0;
+    margin-bottom: 18px; /* space below the header (the "box") */
+}
+.nav-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+nav ul{
+    display: flex;
+    gap: 18px;
+    list-style: none;
+}
+nav a{
+    color: #0f1720;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+nav a:hover{
+    background: #ed20c1;
+    color: #fff;
+    transition: 200ms;
+}
+
+/* Hero */
+.queen{
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg,#b500af,#6be7f8);
+    color: #fff;
+    margin-bottom: 24px; /* space below the hero box */
+}
+.hero{
+    text-align: center;
+    padding: 160px 0;
+}
+.hero h1{
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+}
+.lead{
+    opacity: 0.95;
+    margin-bottom: 18px;
+}
+.btn{
+    display: inline-block;
+    background: #fff;
+    color: #b500a3bd;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+section{
+    padding: 38px 0;
+    margin-bottom: 40px; /* space between sections */
+}
+section h2{
+    margin: 8px 0 12px;
+    font-size: 1.5rem;
+}
+
+#about, .contact{
+    background: rgba(255,255,255,0.6);
+    padding: 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+/* extra spacing specifically for About */
+#about{
+    margin-top: 24px; /* additional space above About Me */
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+/* space between Projects section and Contact */
+#projects{
+    margin-bottom: 60px;
+    margin-top: 24px; /* additional space above Projects */
+}
+.card{
+    background: #f9f4f8;
+    padding: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 6px 18px rgba(12, 72, 203, 0.827);
+    transition: transform .2s, box-shadow .2s;
+}
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(32, 64, 133, 0.903);
+}
+
+footer{
+    text-align: center;
+    padding: 24px 0;
+    margin-top: 24px;
+    color: #000000;
+}
+
+@media (max-width: 600px){
+    .hero h1{ font-size: 1.6rem; }
+    nav ul{ gap: 8px; }
+}
