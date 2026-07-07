@@ -11,10 +11,11 @@ body{
     line-height: 1.6;
 }
 
+
 .container{
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 16px;
+    margin: 30px  auto;
+    padding: 10px 16px;
 }
 
 /* Header */
@@ -48,22 +49,52 @@ nav a:hover{
     transition: 200ms;
 }
 
+
 /* Hero */
 .queen{
     min-height: 70vh;
-    display: flex;
-    align-items: center;
+    display: grid;
+    align-items:center;
+    justify-content: center;
     background: linear-gradient(90deg,#b500af,#6be7f8);
     color: #fff;
     margin-bottom: 24px; /* space below the hero box */
+    padding: 48px 0;
 }
 .hero{
-    text-align: center;
-    padding: 160px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 100%;
+}
+.hero-content{
+    max-width: 560px;
+    text-align: left;
 }
 .hero h1{
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     margin-bottom: 12px;
+}
+.animate-up{
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp 0.8s ease forwards;
+}
+.delay-1{ animation-delay: 0.25s; }
+.delay-2{ animation-delay: 0.5s; }
+@keyframes fadeUp{
+    from{ opacity: 0; transform: translateY(25px); }
+    to{ opacity: 1; transform: translateY(0); }
+}
+.hero-img img{
+    width: 320px;
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 0 18px 36px rgba(0,0,0,0.2);
 }
 .lead{
     opacity: 0.95;
@@ -123,7 +154,14 @@ section h2{
     color: inherit;
     box-shadow: 0 6px 18px rgba(12, 72, 203, 0.827);
     transition: transform .2s, box-shadow .2s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.7s ease forwards;
 }
+.card:nth-child(2){ animation-delay: 0.15s; }
+.card:nth-child(3){ animation-delay: 0.3s; }
+.card:nth-child(4){ animation-delay: 0.45s; }
+.card:nth-child(5){ animation-delay: 0.6s; }
 .card:hover{
     transform: translateY(-6px);
     box-shadow: 0 14px 30px rgba(32, 64, 133, 0.903);
@@ -134,6 +172,25 @@ footer{
     padding: 24px 0;
     margin-top: 24px;
     color: #000000;
+}
+
+@media (max-width: 900px){
+    .queen{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 16px;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+    .hero-content{
+        text-align: center;
+    }
+    .hero-img img{
+        width: 260px;
+        height: 260px;
+    }
 }
 
 @media (max-width: 600px){
