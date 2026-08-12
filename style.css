@@ -46,7 +46,7 @@
     margin: 20px;
     text-align: center;
     font-size: 16px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
     transition: 0.1s;
    
 }
@@ -54,14 +54,14 @@
 
 .container form input:hover{
     background: linear-gradient(135deg, #30003c, #a433c0, #4a004f);
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 20px;
     
 }
 
 .container form button{
     background: linear-gradient(135deg, #30003c, #a433c0, #4a004f);
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 20px;
     height: 40px;
     width: 250px;
